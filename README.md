@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+# to check live website on github pages
 
-You can use the [editor on GitHub](https://github.com/naga2003/bhat-frontend-1/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+To test and get output without downloading project , this project is live on git hub pages. please go to
+https://naga2003.github.io/bhat-frontend-1/
+# to check live website on github pages
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+To test and get output without downloading project , this project is live on git hub pages. please go to (https://naga2003.github.io/bhat-frontend-1/).
 
-### Markdown
+# to install and run code locally.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+link to project repository : (https://github.com/naga2003/bhat-frontend-1)
 
-```markdown
-Syntax highlighted code block
+1. download project from github
+2. use any of the development server and run the project in.
+3. you should be able to fetch the data from the local [exercise-1_data.json] file. show all (5) must be working as said
 
-# Header 1
-## Header 2
-### Header 3
+# to setup local server if not installed. 2 ways
+(simple way) 
 
-- Bulleted
-- List
+1. open code in visual studio code 
+2. go to extensions
+3. search for Live server and install it
+4. right click on index.html and click on Open with Live Server
 
-1. Numbered
-2. List
+(one of the web development server to be installed. here we are going to use http-server)
 
-**Bold** and _Italic_ and `Code` text
+prerequisits : node.js and npm is installed
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/naga2003/bhat-frontend-1/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+run commands in ua command line app
+1. npm i http-server
+2. change directory to where the project's [index.html] present.
+3. run [http-server] command 
+4. project must be running in your local server must be able view on web browser.

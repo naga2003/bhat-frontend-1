@@ -3,7 +3,9 @@ function loadData() {
   fetchData();
 }
 document.getElementById("show-all").addEventListener("click", submitValue);
-
+document
+  .getElementById("history-title")
+  .addEventListener("click", toggleHistory);
 function submitValue(e) {
   e.preventDefault();
   fetchData();
@@ -124,4 +126,24 @@ function formattedDate(key) {
     minutes +
     format +
     " GMT +5");
+}
+
+function expand(t) {
+  var x = document.getElementById("li" + t);
+  x.classList.toggle("expanded");
+}
+
+function toggleHistory() {
+  historyText = document.getElementById("history-title").textContent;
+  if (historyText.split(" ")[0] === "Hide") {
+    document.getElementById("history-title").innerHTML = "Show lock history";
+  } else {
+    document.getElementById("history-title").innerHTML = "Hide lock history";
+  }
+  x = document.getElementById("lock-history");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }

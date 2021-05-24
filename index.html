@@ -89,10 +89,7 @@
             href="https://cdn-web-assets.array.io/webcom-creditlock-1b/credit-freeze-center.dfca0446987a4417d634c2d9d8ed4546.css"
           />
 
-          <div
-            class="center-block active"
-            onclick="window.location.href='/webcom-creditlock-1b/creditlock-locked-history/creditlock-locked-history-page.html'"
-          >
+          <div class="center-block">
             <div class="logo">
               <svg
                 width="176px"
@@ -180,10 +177,13 @@
               </p>
             </div>
             <div>
-              <p class="history-title">Hide lock history</p>
-              <ul id="locks"></ul>
+              <p id="history-title" class="history-title">Hide lock history</p>
 
-              <p id="show-all" class="show-all">Show All (5)</p>
+              <div id="lock-history">
+                <ul id="locks"></ul>
+
+                <p id="show-all" class="show-all">Show All (5)</p>
+              </div>
             </div>
           </div>
         </ul>
@@ -201,13 +201,15 @@
           <div class="lock-freeze-box">Credit Freeze</div>
         </div>
         <ul class="questions">
-          <li class="collapsible arrow-icon">
+          <li id="li1" class="collapsible arrow-icon">
             <link
               rel="stylesheet"
               href="https://cdn-web-assets.array.io/common/collapsible/collapsible.137db3db165ac7a53818153471b712dc.css"
             />
 
             <div
+              id="question1"
+              onclick="expand(1)"
               class="collapsible__open-close-icon open-close-icon"
               data-array-ref="toggleCollapsible"
             >
@@ -259,6 +261,7 @@
 
             <div>
               <p
+                onclick="expand(1)"
                 class="question collapsible__toggle-handler"
                 data-array-ref="toggleCollapsible"
               >
@@ -282,13 +285,14 @@
               </div>
             </div>
           </li>
-          <li class="collapsible arrow-icon">
+          <li id="li2" class="collapsible arrow-icon">
             <link
               rel="stylesheet"
               href="https://cdn-web-assets.array.io/common/collapsible/collapsible.137db3db165ac7a53818153471b712dc.css"
             />
 
             <div
+              onclick="expand(2)"
               class="collapsible__open-close-icon open-close-icon"
               data-array-ref="toggleCollapsible"
             >
@@ -340,6 +344,7 @@
 
             <div>
               <p
+                onclick="expand(2)"
                 class="question collapsible__toggle-handler"
                 data-array-ref="toggleCollapsible"
               >
@@ -354,13 +359,14 @@
               </p>
             </div>
           </li>
-          <li class="collapsible arrow-icon">
+          <li id="li3" class="collapsible arrow-icon">
             <link
               rel="stylesheet"
               href="https://cdn-web-assets.array.io/common/collapsible/collapsible.137db3db165ac7a53818153471b712dc.css"
             />
 
             <div
+              onclick="expand(3)"
               class="collapsible__open-close-icon open-close-icon"
               data-array-ref="toggleCollapsible"
             >
@@ -412,6 +418,7 @@
 
             <div>
               <p
+                onclick="expand(3)"
                 class="question collapsible__toggle-handler"
                 data-array-ref="toggleCollapsible"
               >
@@ -456,13 +463,14 @@
               </div>
             </div>
           </li>
-          <li class="collapsible arrow-icon">
+          <li id="li4" class="collapsible arrow-icon">
             <link
               rel="stylesheet"
               href="https://cdn-web-assets.array.io/common/collapsible/collapsible.137db3db165ac7a53818153471b712dc.css"
             />
 
             <div
+              onclick="expand(4)"
               class="collapsible__open-close-icon open-close-icon"
               data-array-ref="toggleCollapsible"
             >
@@ -514,6 +522,7 @@
 
             <div>
               <p
+                onclick="expand(4)"
                 class="question collapsible__toggle-handler"
                 data-array-ref="toggleCollapsible"
               >
@@ -530,28 +539,5 @@
         </ul>
       </section>
     </div>
-
-    <script src="https://html.dev.credmo.com/assets/js/zepto.min.js"></script>
-    <script src="https://html.dev.credmo.com/assets/js/utils.js"></script>
-    <script src="https://html.dev.credmo.com/common/collapsible/collapsible.js"></script>
-    <script>
-      (function () {
-        $(document).on("click", ".history-title", () => {
-          $(".history-list").toggle();
-          $(".show-all").toggle();
-
-          const title = $(".history-title").text();
-          if (title.indexOf("Show") === 0) {
-            $(".history-title").text(title.replace("Show", "Hide"));
-          } else {
-            $(".history-title").text(title.replace("Hide", "Show"));
-          }
-        });
-
-        window.utils.ensure(".center-block", () => {
-          $(".center-block").removeAttr("onclick");
-        });
-      })();
-    </script>
   </body>
 </html>
